@@ -1,0 +1,13 @@
+.cartographer-map {
+  width: 100%;
+  height: 560px;
+}
+
+.cartographer-map iframe {
+  border: none;
+}
+
+.cartographer-error {
+  padding: 10px;
+  background: #fcc;
+}
