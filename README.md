@@ -11,6 +11,9 @@ Wordpress plugin for displaying map widgets containing data from [Cartographer](
  +- wp-content
      +- plugins
          +- wp-cartographer
+             +- wp-cartographer.php
+             +- wp-cartographer.css
+             +- and so on...
 ~~~
 
 2. Log in to your Wordpress admin site and navigate to the *Plugins* item in the left hand menu bar.
