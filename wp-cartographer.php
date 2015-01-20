@@ -38,7 +38,7 @@ function cartographer_register_map_script() {
 function cartographer_register_map_style() {
   if(!defined("cartographer_map_style_registered")) {
     define("cartographer_map_style_registered", 1);
-    wp_enqueue_style("cartographer_map_style", plugin_dir_url( __FILE__ ) . "cartographer.css", null, null, 'all');
+    wp_enqueue_style("cartographer_map_style", plugin_dir_url( __FILE__ ) . "wp-cartographer.css", null, null, 'all');
   }
 }
 
