@@ -55,12 +55,16 @@ The various options are described below. You must include the `subdomain` and `l
    [cartographer_map zoom="10" ...other options...]
    ~~~
 
- - `inspector` -- Whether to enable/display the inspector (left hand sidebar) and which modes to allow:
+ - `inspector` -- Whether to enable/display the inspector (left hand sidebar) and which modes to allow. Specified as a *mode* and zero or more *flags*, specified as a comma-separated list `mode,flag,flag,flag,...`:
 
-   - `no` -- don't display the inspector;
-   - `yes` -- do display the inspector;
-   - `data` -- do display the inspector, show the *Data* tab by default;
-   - `photos` -- do display the inspector, show the *Photos* tab by default.
+   - `mode` is one of:
+      - `no` -- don't display the inspector;
+      - `yes` -- do display the inspector;
+      - `data` -- do display the inspector, preselect the *Survey Data* tab;
+      - `photos` -- do display the inspector, preselect the *Photos* tab;
+   - each `flag` is one of:
+      - `nodata` -- disable the *Survey Data* tab;
+      - `nophotos` -- disable the *Photos* tab.
 
    ~~~
    [cartographer_map inspector="data" ...other options...]

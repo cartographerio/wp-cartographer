@@ -31,7 +31,7 @@ $cartographer_map_atts_defaults = array();
 function cartographer_register_map_script() {
   if(!defined("cartographer_map_script_registered")) {
     define("cartographer_map_script_registered", 1);
-    wp_enqueue_script("cartographer_map_script", 'https://cartographer.io/static/widget/map/v1/loader.js', null, null, null, true);
+    wp_enqueue_script("cartographer_map_script", 'https://widget.cartographer.io/map/v1/loader.js', null, null, null, true);
   }
 }
 
