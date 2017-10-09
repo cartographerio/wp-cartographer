@@ -3,7 +3,7 @@
  * Plugin Name: Cartographer Maps
  * Plugin URI: https://github.com/cartographerio/wp-cartographer
  * Description: Add Cartographer maps to your Wordpress web site
- * Version: 1.0.0
+ * Version: 0.4.0
  * Author: Dave Gurnell
  * Author URI: http://cartographer.io
  * License: GPL2
@@ -64,7 +64,7 @@ function cartographer_map_shortcode( $atts, $content = null ) {
   $atts = shortcode_atts($cartographer_map_atts_spec, array_merge($cartographer_map_atts_defaults, $atts));
 
   if(isset($atts['subdomain']) && isset($atts['layer'])) {
-    $html_atts = '';
+    $html_atts = Array();
     foreach($atts as $key => $value) {
       if($value) {
         $enc_key     = "data-$key";
