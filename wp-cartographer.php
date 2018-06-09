@@ -3,7 +3,7 @@
  * Plugin Name: Cartographer Maps
  * Plugin URI: https://github.com/cartographerio/wp-cartographer
  * Description: Add Cartographer maps to your Wordpress web site
- * Version: 0.4.0
+ * Version: 0.5.0
  * Author: Dave Gurnell
  * Author URI: http://cartographer.io
  * License: GPL2
