@@ -37,10 +37,16 @@ The various options are described below. You must include the `subdomain` and `l
    [cartographer_map subdomain="mycompany" ...other options...]
    ~~~
 
- - `layer` (required) -- The map layer you wish to display, written in the format `featureType.attributeName`. Check with the Cartographer support team for a list of valid layer names for your site.
+ - `layer` (required) -- The map layer you wish to display. Check with the Cartographer support team for a list of valid layer names for your site.
 
    ~~~
-   [cartographer_map layer="featureType.attributeName" ...other options...]
+   [cartographer_map layer="layerName" ...other options...]
+   ~~~
+
+ - `attribute` -- The attribute from your map layer that you'd like to display by default (attributes are the items in the left-hand "inspector menu" in the Cartographer UI). Check with the Cartographer support team for a list of valid attribute names for your map layer.
+
+   ~~~
+   [cartographer_map attribute="attributeName" ...other options...]
    ~~~
 
  - `center` -- The initial latitude and longitude of the center of the map:
