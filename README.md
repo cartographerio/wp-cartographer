@@ -37,10 +37,16 @@ The various options are described below. You must include the `subdomain` and `l
    [cartographer_map subdomain="mycompany" ...other options...]
    ~~~
 
- - `layer` (required) -- The map layer you wish to display, written in the format `featureType.attributeName`. Check with the Cartographer support team for a list of valid layer names for your site.
+ - `layer` (required) -- The map layer you wish to display. Check with the Cartographer support team for a list of valid layer names for your site.
 
    ~~~
-   [cartographer_map layer="featureType.attributeName" ...other options...]
+   [cartographer_map layer="layerName" ...other options...]
+   ~~~
+
+ - `attribute` -- The attribute from your map layer that you'd like to display by default (attributes are the items in the left-hand "inspector menu" in the Cartographer UI). Check with the Cartographer support team for a list of valid attribute names for your map layer.
+
+   ~~~
+   [cartographer_map attribute="attributeName" ...other options...]
    ~~~
 
  - `center` -- The initial latitude and longitude of the center of the map:
@@ -64,7 +70,9 @@ The various options are described below. You must include the `subdomain` and `l
       - `photos` -- do display the inspector, preselect the *Photos* tab;
    - each `flag` is one of:
       - `nodata` -- disable the *Survey Data* tab;
-      - `nophotos` -- disable the *Photos* tab.
+      - `nophotos` -- disable the *Photos* tab;
+      - `nocharts` -- disable timelines and histograms;
+      - `nolayerselect` -- prevent the user clicking the inspector to select attributes.
 
    ~~~
    [cartographer_map inspector="data" ...other options...]
@@ -78,24 +86,6 @@ The various options are described below. You must include the `subdomain` and `l
 
    ~~~
    [cartographer_map legend="no" ...other options...]
-   ~~~
-
- - `charts` -- Whether to show charts in the inspector:
-
-   - `yes` -- show charts of the currently selected layer;
-   - `no` -- don't show any charts.
-
-   ~~~
-   [cartographer_map charts="no" ...other options...]
-   ~~~
-
- - `selectlayers` -- Whether to allow the user to select map layers by clicking data values in the inspector:
-
-   - `yes` -- allow the user to change layers;
-   - `no` -- don't allow the user to change layers.
-
-   ~~~
-   [cartographer_map selectlayers="no" ...other options...]
    ~~~
 
  - `selectradius` -- The radius (in meters) used to select nearby data points for inclusion in the timeline chart in the inspector:

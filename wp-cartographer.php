@@ -3,7 +3,7 @@
  * Plugin Name: Cartographer Maps
  * Plugin URI: https://github.com/cartographerio/wp-cartographer
  * Description: Add Cartographer maps to your Wordpress web site
- * Version: 0.4.0
+ * Version: 0.5.0
  * Author: Dave Gurnell
  * Author URI: http://cartographer.io
  * License: GPL2
@@ -14,6 +14,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 $cartographer_map_atts_spec = array(
   'subdomain'    => null,
   'layer'        => null,
+  'attribute'    => null,
   'center'       => null,
   'zoom'         => null,
   'autodiscover' => null,
@@ -82,13 +83,13 @@ function cartographer_map_shortcode( $atts, $content = null ) {
 
   <p>Please specify a <tt>subdomain</tt> and <tt>layer</tt> in your shortcode, for example:</p>
 
-  <pre>[cartographer_map subdomain="mysubdomain" layer="myLayer.myAttribute"]</pre>
+  <pre>[cartographer_map subdomain="mysubdomain" layer="myLayer"]</pre>
 
   <p>or:</p>
 
   <pre>[cartographer_map_defaults subdomain="mysubdomain"]
 
-[cartographer_map layer="myLayer.myAttribute"]</pre>
+[cartographer_map layer="myLayer"]</pre>
 </div>
 ENDERROR;
   }
