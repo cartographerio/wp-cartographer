@@ -65,15 +65,14 @@ function cartographer_map_shortcode( $atts, $content = null ) {
   $atts = shortcode_atts($cartographer_map_atts_spec, array_merge($cartographer_map_atts_defaults, $atts));
 
   if(isset($atts['subdomain']) && isset($atts['layer'])) {
-    $html_atts = Array();
+    $html_atts = '';
     foreach($atts as $key => $value) {
       if($value) {
-        $enc_key     = "data-$key";
-        $enc_value   = htmlentities($value);
-        $html_atts []= "$enc_key=\"$enc_value\"";
+        $enc_key    = "data-$key";
+        $enc_value  = htmlentities($value);
+        $html_atts .= " $enc_key=\"$enc_value\"";
       }
     }
-    $html_atts = join(' ', $html_atts);
 
     return "<div class=\"cartographer-map\" data-cartographer-map $html_atts></div>";
   } else {
